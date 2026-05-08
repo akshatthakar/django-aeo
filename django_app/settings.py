@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-change-me'
 DEBUG = True
-ALLOWED_HOSTS = ['akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net','localhost']
+ALLOWED_HOSTS = ['akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
