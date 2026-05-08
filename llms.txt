@@ -1,10 +1,11 @@
-Title: Investment Product Resources
+#Title: Investment Product Resources
 
-Here are some sample links to popular Large Language Models and related resources:
+## Here are some links to investment products and related resources:
 
-1. Bonds: https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/bondfaq
-2. Derivatives: https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/derivativesfaq
-3. Mutual Funds: https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/
-
+- [Bonds] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/bondfaq)
+- [Derivatives] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/derivativesfaq)
+- [Mutual Funds] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/mutualfundfaq)
+- [Providers] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/providersfaq)
+- [Investment criterias] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/criteriasfaq)
 
 For more information, visit the official documentation of each provider.

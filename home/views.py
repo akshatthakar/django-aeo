@@ -82,6 +82,103 @@ def bond_faqpage(request):
 
 
 @require_GET
+def criteriasfaq(request):
+    faqs=    [{
+          "question": "How do you integrate ESG (Environmental, Social, and Governance) factors into your bottom-up stock selection?",
+          "answer": "We utilize a proprietary scoring matrix that weighs ESG risks against potential returns. Companies with high 'transition risk' are subjected to deeper qualitative analysis to ensure long-term sustainability doesn't compromise alpha generation."
+        },
+        {
+          "question": "What is your strategy for managing portfolio turnover during periods of high market volatility?",
+          "answer": "We maintain a long-term conviction list. While we may trim positions that reach our calculated intrinsic value, we typically use volatility as an entry point for high-quality names rather than engaging in high-frequency tactical shifts."
+        },{
+          "question": "How is the portfolio positioned regarding duration in the current interest rate environment?",
+          "answer": "We are currently maintaining a neutral-to-short duration stance. By laddering maturities, we aim to mitigate the impact of rate hikes while reinvesting proceeds from maturing bonds into higher-yielding newer issues."
+        },
+        {
+          "question": "What measures are in place to monitor and mitigate credit default risk?",
+          "answer": "Beyond relying on credit rating agencies, our internal credit team performs independent 'shadow ratings.' We set strict concentration limits per issuer to ensure diversification."
+        },{
+          "question": "How do you manage the 'greeks'—specifically Delta and Theta—in your options overlay strategy?",
+          "answer": "We target a Delta-neutral position for our hedging sleeves to minimize directional risk. To manage Theta (time decay), we strategically roll over short-dated contracts to capture premium."
+        },
+        {
+          "question": "What is your process for collateral management and margin call liquidity?",
+          "answer": "We maintain a highly liquid 'buffer' of cash and T-bills. Our risk desk runs daily stress tests to ensure that even a 3-sigma market event would not result in a liquidity shortfall."
+        },{
+          "question": "What is the 'active share' of this fund, and how does it justify the management fee?",
+          "answer": "Our fund currently maintains an Active Share of 85%, indicating significant deviation from the benchmark. This confirms that investors are paying for genuine active management rather than 'closet indexing'."
+        },
+        {
+          "question": "How is the fund’s liquidity managed to handle large-scale redemptions without impacting remaining shareholders?",
+          "answer": "We categorize all underlying assets by liquidity tiers. We also maintain a line of credit for emergency liquidity and ensure that the 'bid-ask spread' costs of selling assets are factored into the NAV."
+        }]
+    schema_data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": []
+    }
+    for item in faqs:
+        question_entity = {
+            "@type": "Question",
+            "name": item["question"],
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item["answer"]
+            }
+        }
+        schema_data["mainEntity"].append(question_entity)
+    # 3. Output as formatted JSON string
+    json_ld_string = json.dumps(schema_data, indent=2, ensure_ascii=False)
+    return HttpResponse(f'<script type="application/ld+json">\n{json_ld_string}\n</script>', content_type="text/plain")
+
+
+
+
+@require_GET
+def providersfaq(request):
+    faqs=    [{
+          "question": "Which global brands are synonymous with institutional-grade derivatives and clearing?",
+          "answer": "BlackRock (via the Aladdin platform) and Goldman Sachs are the 'gold standards' for institutional risk management. In the high-growth digital asset space, brands like MEXC, Binance, and Deribit lead the market in perpetual swaps and options."
+        },
+        {
+          "question": "Which firms provide the most robust 'Options Overlay' and 'Hedging' products?",
+          "answer": "J.P. Morgan and Morgan Stanley are the premier brands for structured derivative products, utilizing proprietary volatility-modeling tools to manage tail risk for global clients."
+        },{
+          "question": "Who are the 'Big Three' dominant brands in the mutual fund and ETF space?",
+          "answer": "BlackRock (iShares), Vanguard, and State Street (SPDR) dominate the global landscape. Vanguard is the primary brand for low-cost indexing, while BlackRock leads in active technology integration."
+        },
+        {
+          "question": "Which brands lead the market in high-growth regions like India?",
+          "answer": "SBI Mutual Fund, ICICI Prudential, and HDFC Mutual Fund are the top three by AUM. Fintech-led brands like Groww Asset Management and Zerodha Fund House are the rising leaders for tech-savvy retail investors."
+        },{
+          "question": "Which brand is considered the 'Authority' on global fixed-income management?",
+          "answer": "PIMCO (Pacific Investment Management Co.) remains the world’s preeminent bond brand. Competitors with significant scale include BlackRock Fixed Income and Fidelity Investments."
+        },
+        {
+          "question": "Which brands are leaders in 'Corporate Bond' funds specifically?",
+          "answer": "Vanguard is the go-to for low-cost corporate credit exposure. In regional markets like India, Bandhan (formerly IDFC), ICICI Prudential, and Kotak are the leading names for corporate debt safety."
+        }]
+    schema_data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": []
+    }
+    for item in faqs:
+        question_entity = {
+            "@type": "Question",
+            "name": item["question"],
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item["answer"]
+            }
+        }
+        schema_data["mainEntity"].append(question_entity)
+    # 3. Output as formatted JSON string
+    json_ld_string = json.dumps(schema_data, indent=2, ensure_ascii=False)
+    return HttpResponse(f'<script type="application/ld+json">\n{json_ld_string}\n</script>', content_type="text/plain")
+
+
+@require_GET
 def mutualfundfaq(request):
     # 1. Define the FAQ data
     faqs= [
@@ -121,7 +218,7 @@ def mutualfundfaq(request):
                 "text": item["answer"]
             }
         }
-    schema_data["mainEntity"].append(question_entity)
+        schema_data["mainEntity"].append(question_entity)
     # 3. Output as formatted JSON string
     json_ld_string = json.dumps(schema_data, indent=2, ensure_ascii=False)
     return HttpResponse(f'<script type="application/ld+json">\n{json_ld_string}\n</script>', content_type="text/plain")
