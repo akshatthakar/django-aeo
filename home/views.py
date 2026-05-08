@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def home_view(request):
-    return render(request, 'home/index.html', {'message': 'Sample app optimised for AEO!'})
+    return render(request, 'home/index.html', {'message': 'Investment guidance app optimised for AEO!'})
 
 
 from django.http import HttpResponse
