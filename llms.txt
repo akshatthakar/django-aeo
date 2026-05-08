@@ -1,13 +1,10 @@
-Title: Large Language Models (LLMs) Resources
+Title: Investment Product Resources
 
 Here are some sample links to popular Large Language Models and related resources:
 
-1. OpenAI GPT Series: https://openai.com/gpt/
-2. Hugging Face Models: https://huggingface.co/models
-3. Google's Bard (now Gemini): https://bard.google.com/
-4. Anthropic Claude: https://www.anthropic.com/claude
-5. Meta Llama: https://ai.meta.com/llama/
-6. Cohere Command: https://cohere.com/command
-7. Stability AI Stable Diffusion (for text-to-image): https://stability.ai/
+1. Bonds: https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/bondfaq
+2. Derivatives: https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/derivativesfaq
+3. Mutual Funds: https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/
+
 
 For more information, visit the official documentation of each provider.

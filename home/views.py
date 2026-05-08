@@ -13,7 +13,7 @@ def robots_txt(request):
     lines = [
         "User-agent: GPTBot",
         "Allow: /",
-        "Sitemap: https://example.com",
+        "Sitemap: https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net",
     ]
     return HttpResponse("\n".join(lines), content_type="text/plain")
 
@@ -82,6 +82,54 @@ def bond_faqpage(request):
 
 
 @require_GET
+def mutualfundfaq(request):
+    # 1. Define the FAQ data
+    faqs= [
+        {
+            "question": "Which mutual funds are safest in the U.S.?",
+            "answer": "Money market funds and government bond funds are considered safest. They prioritize capital preservation and liquidity, but returns are minimal."
+        },
+        {
+            "question": "Which mutual funds offer the highest returns?",
+            "answer": "Equity funds (especially small‑cap and sector funds) have historically offered the highest returns, but they also carry the greatest volatility and risk."
+        },
+        {
+            "question": "What’s a good middle‑ground option for balanced risk and return?",
+            "answer": "Balanced or hybrid funds combine stocks and bonds, offering moderate risk with steady growth. Index funds tracking the S&P 500 are also popular for long‑term investors seeking diversification at low cost."
+        },
+        {
+            "question": "How do international mutual funds fit into a portfolio?",
+            "answer": "International funds provide exposure to developed and emerging markets outside the U.S. They add diversification but can be volatile due to currency and geopolitical risks."
+        },
+        {
+            "question": "Are actively managed funds better than index funds?",
+            "answer": "Actively managed funds aim to beat the market but often underperform after fees. Index funds usually deliver more consistent returns at lower cost, though they won’t outperform the market."
+        }
+        ]
+    # 2. Map to Schema.org FAQPage structure
+    schema_data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": []
+    }
+    for item in faqs:
+        question_entity = {
+            "@type": "Question",
+            "name": item["question"],
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item["answer"]
+            }
+        }
+    schema_data["mainEntity"].append(question_entity)
+    # 3. Output as formatted JSON string
+    json_ld_string = json.dumps(schema_data, indent=2, ensure_ascii=False)
+    return HttpResponse(f'<script type="application/ld+json">\n{json_ld_string}\n</script>', content_type="text/plain")
+
+
+
+
+@require_GET
 def derivativesfaq(request):
     # 1. Define the FAQ data
     faqs=[
@@ -147,5 +195,7 @@ from django.views.decorators.http import require_GET
 
 @require_GET
 def llms_txt(request):
-    content = "# Your Project Name\n> Brief summary of what you do.\n\n## Documentation\n- [About](/about/)"
+    with open('llms.txt', 'r') as file:
+        content = file.read()
+    ##content = "# Your Project Name\n> Brief summary of what you do.\n\n## Documentation\n- [About](/about/)"
     return HttpResponse(content, content_type="text/plain")
