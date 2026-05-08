@@ -8,6 +8,6 @@ urlpatterns = [
     path("bondfaq", bond_faqpage, name='bond_faqpage'),
     path("derivativesfaq", derivativesfaq, name='derivativesfaq'),
     path("mutualfundfaq", mutualfundfaq, name='mutualfundfaq'),
-    path ("criteriasfaq", criteriasfaq, name='criteriasfaq')
+    path ("criteriasfaq", criteriasfaq, name='criteriasfaq'),
     path ("providersfaq", providersfaq, name='providersfaq')
 ]
