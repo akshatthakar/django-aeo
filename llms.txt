@@ -7,5 +7,6 @@
 - [Mutual Funds] (/mutualfundfaq)
 - [Providers] (/providersfaq)
 - [Investment criterias] (/criteriasfaq)
+- [Trading Methods] (/tradingfaq)
 
 For more information, visit the official documentation of each provider.

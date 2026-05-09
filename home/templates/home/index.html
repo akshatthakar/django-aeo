@@ -24,15 +24,31 @@
     }
   }
 }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Article",
+  "name": "Speakable content",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "#headline",
+      "#summary"
+    ]
+  },
+  "url": "https://investments-aeo-app-ehdsbafpfhhtgce2.canadacentral-01.azurewebsites.net/logo.webp"
+    }
+</script>
 </script>
 
 </head>
 <body>
-    <img src="{% url 'logo' %}" alt="App Logo" style="max-width: 200px;">
     <h1>{{ message }}</h1>
-    <p>Welcome to your new investment guidance web app.</p>
-    <p> balance your investments with multi product strategy to suite your appetite</p>
-    <p> We provide information on bonds, derivatives, mutual funds, trading and more to help you make informed decisions.</p>
+    <headline>Welcome to your new investment guidance web app.</headline>
+    <summary>
+        <p> balance your investments with multi product strategy to suite your appetite</p>
+        <p> We provide information on bonds, derivatives, mutual funds, trading and more to help you make informed decisions.</p>
+    </summary>
     <p> We do not deal with Equities</p>
 </body>
 </html>
