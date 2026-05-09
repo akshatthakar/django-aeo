@@ -2,10 +2,10 @@
 
 ## Here are some links to investment products and related resources:
 
-- [Bonds] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/bondfaq)
-- [Derivatives] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/derivativesfaq)
-- [Mutual Funds] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/mutualfundfaq)
-- [Providers] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/providersfaq)
-- [Investment criterias] (https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net/criteriasfaq)
+- [Bonds] (/bondfaq)
+- [Derivatives] (/derivativesfaq)
+- [Mutual Funds] (/mutualfundfaq)
+- [Providers] (/providersfaq)
+- [Investment criterias] (/criteriasfaq)
 
 For more information, visit the official documentation of each provider.
