@@ -1,4 +1,7 @@
 from django.shortcuts import render
+import os
+from django.conf import settings
+from django.http import Http404
 
 
 def home_view(request):
@@ -13,7 +16,7 @@ def robots_txt(request):
     lines = [
         "User-agent: GPTBot",
         "Allow: /",
-        "Sitemap: https://akshatapp-axfvcpa5f4d2bmgm.canadacentral-01.azurewebsites.net",
+        "Sitemap: investments-aeo-app-ehdsbafpfhhtgce2.canadacentral-01.azurewebsites.net",
     ]
     return HttpResponse("\n".join(lines), content_type="text/plain")
 
@@ -131,6 +134,51 @@ def criteriasfaq(request):
     json_ld_string = json.dumps(schema_data, indent=2, ensure_ascii=False)
     return HttpResponse(f'<script type="application/ld+json">\n{json_ld_string}\n</script>', content_type="text/plain")
 
+@require_GET
+def tradingfaq(request):
+    faqs =    [
+      {
+        "question": "How does the strategy balance 'Yield Generation' against 'Tail Risk' in a volatile market?",
+        "answer": "We employ delta-hedged writing and defined-risk spreads, such as Iron Condors. By never selling 'naked' options and ensuring every short position is offset by a further out-of-the-money long wing, we cap maximum potential loss while harvesting the Variance Risk Premium."
+      },
+      {
+        "question": "In 2026, how are you utilizing 'Theta Decay' to ensure consistent monthly returns?",
+        "answer": "We target the 'Sweet Spot' of the decay curve, selling options with 30 to 45 days to expiration (DTE). We systematically roll positions at 21 DTE to mitigate the erratic gamma risk associated with the final week of an option's life."
+      },
+      {
+        "question": "How does the provider manage 'Vega Risk' when the VIX spikes unexpectedly?",
+        "answer": "We utilize a Dynamic Volatility Buffer. During low VIX environments, we reduce position sizing; during spikes, we increase selling activity to capture inflated premiums, often shifting to Calendar Spreads to maintain a long volatility bias in back months."
+      },
+      {
+        "question": "What role does AI-driven forecasting play in your strike price selection?",
+        "answer": "Our machine learning models analyze market 'Skew' to identify over-leveraged put walls. This allows us to avoid high-risk zones and instead execute Call Credit Spreads to capitalize on mean reversion detected by the AI."
+      },
+      {
+        "question": "What is the 'Stop-Loss' protocol for a trade that goes deep In-The-Money (ITM)?",
+        "answer": "We enforce a strict 2x Premium Rule. If a sold option's value doubles against us, the trade is automatically closed or rolled. This discipline prevents a single black-swan event from neutralizing months of premium income."
+      },
+      {
+        "question": "How do you justify fees for an 'Option Income' fund compared to buy-and-hold?",
+        "answer": "The value-add is Volatility Arbitrage. Our overlay typically offsets 20-30% of market drawdowns through premium collection, resulting in a superior Sortino Ratio compared to unhedged equity exposure."
+      }]
+    schema_data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": []
+    }
+    for item in faqs:
+        question_entity = {
+            "@type": "Question",
+            "name": item["question"],
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item["answer"]
+            }
+        }
+        schema_data["mainEntity"].append(question_entity)
+    # 3. Output as formatted JSON string
+    json_ld_string = json.dumps(schema_data, indent=2, ensure_ascii=False)
+    return HttpResponse(f'<script type="application/ld+json">\n{json_ld_string}\n</script>', content_type="text/plain")
 
 
 
@@ -296,3 +344,13 @@ def llms_txt(request):
         content = file.read()
     ##content = "# Your Project Name\n> Brief summary of what you do.\n\n## Documentation\n- [About](/about/)"
     return HttpResponse(content, content_type="text/plain")
+
+
+@require_GET
+def logo(request):
+    file_path = os.path.join(settings.BASE_DIR, 'logo.webp')
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as f:
+            return HttpResponse(f.read(), content_type='image/webp')
+    else:
+        raise Http404

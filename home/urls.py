@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home_view, robots_txt, bond_faqpage, llms_txt,derivativesfaq,mutualfundfaq,criteriasfaq,providersfaq
+from .views import home_view, robots_txt, bond_faqpage, llms_txt,derivativesfaq,mutualfundfaq,criteriasfaq,providersfaq,tradingfaq,logo
 
 urlpatterns = [
     path('', home_view, name='home'),
@@ -9,5 +9,7 @@ urlpatterns = [
     path("derivativesfaq", derivativesfaq, name='derivativesfaq'),
     path("mutualfundfaq", mutualfundfaq, name='mutualfundfaq'),
     path ("criteriasfaq", criteriasfaq, name='criteriasfaq'),
-    path ("providersfaq", providersfaq, name='providersfaq')
+    path ("providersfaq", providersfaq, name='providersfaq'),
+    path ("tradingfaq", tradingfaq, name='tradingfaq'),
+    path("logo.webp", logo, name='logo'),
 ]
