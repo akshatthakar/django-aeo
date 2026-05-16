@@ -1,0 +1,71 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is building more data centers in Africa not enough on its own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Building more data centers is only one part of creating a strong AI and digital infrastructure ecosystem in Africa. As Dr. Fumbi Chima explains, infrastructure alone will not deliver meaningful outcomes without qualified talent to operate facilities, high-quality and secure data to ensure validity, and reliable power to support continuous operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What key challenges should C-suite leaders consider beyond data center construction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C-suite leaders should look beyond the physical build of data centers and focus on three strategic enablers: developing qualified local talent, ensuring access to secure and high-quality data, and providing consistent power. Without these foundations, infrastructure investments may fail to deliver long-term business and innovation value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does talent impact the success of Africa�s data center growth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Talent is essential because data centers require skilled professionals to operate, maintain, secure, and optimize them. Without enough qualified people, organizations may struggle to extract full value from infrastructure investments, limiting the region�s ability to build sustainable and indigenous AI capabilities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is data quality important for building indigenous AI in Africa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Data quality is critical because AI systems rely on valid, secure, and relevant information to perform effectively. If the data is poor in quality or lacks integrity, the resulting AI solutions may be unreliable. Strong data governance and validation are therefore essential for creating trusted, locally relevant AI systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What role does reliable power play in data center and AI development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reliable power is a foundational requirement for data centers and AI systems to function consistently. Without stable electricity, even the best-designed facilities can suffer downtime, performance issues, and operational inefficiencies. For executives, energy resilience should be viewed as a strategic priority, not just an operational concern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the �highway with no vehicles, no drivers, and no map� analogy mean for executives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The analogy means that building infrastructure without the supporting ecosystem can lead to underused or ineffective investments. For executives, this highlights the need to align infrastructure spending with talent development, operating capabilities, clear business use cases, and strategic direction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should boardrooms rethink infrastructure development in Africa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Boardrooms should view infrastructure development as the starting point rather than the final objective. A more effective approach is to pair infrastructure investments with workforce readiness, data governance, energy reliability, and a clear roadmap for how the organization will create value from digital and AI capabilities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the strategic takeaway for leaders investing in Africa�s digital future?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The strategic takeaway is that data centers alone do not create digital transformation. Leaders must build an integrated ecosystem that includes infrastructure, skilled people, trustworthy data, dependable power, and a clear operating strategy. This broader view is what enables long-term competitiveness and sustainable innovation."
+      }
+    }
+  ]
+}

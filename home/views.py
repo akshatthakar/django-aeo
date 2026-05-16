@@ -3,13 +3,60 @@ import os
 from django.conf import settings
 from django.http import Http404
 
+from django.http import HttpResponse
+from django.views.decorators.http import require_GET
 
 def home_view(request):
     return render(request, 'home/index.html', {'message': 'Investment guidance app optimised for AEO!'})
 
+@require_GET
+def aeo_view(request):
+    content = ""
+    module_dir = os.path.dirname(__file__)   
+    file_path = os.path.join(module_dir,"aeo_output", 'how-africa-could-be-next-data-center-location-special-article.txt') 
+    with open(file_path) as f :
+       content = f.read()    
+    return render(request, 'home/aeo.html' , {'content': content})
 
-from django.http import HttpResponse
-from django.views.decorators.http import require_GET
+@require_GET
+def aeo1_view(request):
+    content = ""
+    module_dir = os.path.dirname(__file__)   
+    file_path = os.path.join(module_dir,"aeo_output", 'how-c-suite-executives-can-scale-ai-across-the-global-enterprise.txt') 
+    with open(file_path) as f :
+       content = f.read()    
+    return render(request, 'home/aeo.html' , {'content': content})
+
+@require_GET
+def aeo2_view(request):
+    content = ""
+    module_dir = os.path.dirname(__file__)   
+    file_path = os.path.join(module_dir,"aeo_output", 'the-rise-of-the-chief-resource-officer.txt') 
+    with open(file_path) as f :
+       content = f.read()    
+    return render(request, 'home/aeo.html' , {'content': content})
+
+@require_GET
+def aeo3_view(request):
+    content = ""
+    module_dir = os.path.dirname(__file__)   
+    file_path = os.path.join(module_dir,"aeo_output", 'human-ai-leadership-the-leadership-pivot-of-2026.txt') 
+    with open(file_path) as f :
+       content = f.read()    
+    return render(request, 'home/aeo.html' , {'content': content})
+
+@require_GET
+def aeo4_view(request):
+    content = ""
+    module_dir = os.path.dirname(__file__)   
+    file_path = os.path.join(module_dir,"aeo_output", 'measurable-execution-as-the-new-standard.txt') 
+    with open(file_path) as f :
+       content = f.read()    
+    return render(request, 'home/aeo.html' , {'content': content})
+
+
+
+
 
 @require_GET
 def robots_txt(request):

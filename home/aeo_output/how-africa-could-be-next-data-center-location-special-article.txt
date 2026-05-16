@@ -1,0 +1,71 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why should C-suite leaders pay attention to Africa as a future data center destination?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C-suite leaders should pay attention because AI-driven demand for computing power is reshaping the global infrastructure map. Traditional hubs such as Northern Virginia, Dublin, and Singapore are facing pressure from land constraints, energy grid stress, and local resistance to further expansion. Africa is emerging as a credible alternative, with growing digital gateways, expanding submarine cable connectivity, and rising bandwidth that could support future-scale infrastructure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is AI accelerating the need for new data center locations globally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI is increasing demand for compute capacity at an exponential rate, pushing existing digital infrastructure toward its limits. This surge is creating urgent challenges around power availability, real estate, and scalability in established regions. As a result, executives must evaluate new geographies that can support long-term infrastructure expansion, and Africa is increasingly part of that conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Africa already have the digital foundation to support data center growth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Africa is not starting from zero. Key cities such as Lagos, Nairobi, and Johannesburg already function as important digital gateways. These cities are supported by growing submarine cable networks and increasing bandwidth, giving the continent a stronger infrastructure base than many decision-makers may assume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What strategic value can data centers unlock for African markets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beyond infrastructure, data centers can help unlock broader digital ecosystems. They can support start-up growth, reduce latency, create jobs, improve local computing capabilities, and drive wider economic transformation. For executive leaders, this means data center investment can create both direct operational value and long-term regional market development."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Africa being compared to Dublin�s rise as a technology hub?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The comparison highlights how digital infrastructure can catalyze broader economic transformation. Dublin was not always seen as a major technology hub, but the development of data centers helped create momentum for wider ecosystem growth. The article suggests that Africa could follow a similar path if infrastructure investment is aligned with the right policy, energy, and business conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the biggest risks executives should evaluate before investing in African data center expansion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main risks include energy reliability, regulatory clarity, and political stability. While the opportunity is significant, successful investment depends on the right operating environment. C-suite leaders should assess local power resilience, government policy consistency, and country-level stability before making long-term infrastructure decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the timing favorable for Africa�s emergence in the global data center market?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The timing is favorable because two powerful trends are converging. First, AI is forcing organizations to rethink where digital infrastructure should be built. Second, Africa�s digital economy is growing rapidly through mobile adoption, fintech innovation, and a large, tech-engaged population. Together, these trends create a strong window for strategic infrastructure expansion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should executive teams be asking now about Africa�s role in future infrastructure planning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Executive teams should move beyond asking whether Africa will become a major data center destination and instead ask which countries are best positioned to act first, how quickly they can scale, and what competitive advantage early investment may create. This reframes the issue from possibility to strategic timing and market selection."
+      }
+    }
+  ]
+}
